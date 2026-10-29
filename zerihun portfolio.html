@@ -1,0 +1,1611 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zerihun Getachew | Anesthesia Practitioner Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter, Outfit & Noto Sans Ethiopic for Amharic rendering -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Ethiopic:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        medical: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            200: '#99f6e4',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a',
+                        },
+                        navy: {
+                            800: '#0a192f',
+                            900: '#020c1b',
+                            950: '#010712',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans Ethiopic', 'sans-serif'],
+                        heading: ['Outfit', 'Noto Sans Ethiopic', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #14b8a6;
+            border-radius: 4px;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(203, 213, 225, 0.8);
+            box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05);
+        }
+        .dark .glass-card {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: none;
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #0d9488 0%, #0284c7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .dark .text-gradient {
+            background: linear-gradient(135deg, #2dd4bf 0%, #38bdf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .lang-btn-active {
+            background-color: #0d9488;
+            color: #ffffff !important;
+            box-shadow: 0 2px 8px rgba(13, 148, 136, 0.3);
+        }
+
+        /* ---------- Circular Profile Photo Animations ---------- */
+        .profile-ring {
+            background: conic-gradient(from 0deg, #0d9488, #0ea5e9, #2dd4bf, #38bdf8, #22d3ee, #0d9488);
+        }
+        @keyframes spin-slow {
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin-slow {
+            animation: spin-slow 7s linear infinite;
+        }
+        @keyframes float-slow {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float-slow {
+            animation: float-slow 6s ease-in-out infinite;
+        }
+        @keyframes glow-pulse {
+            0%, 100% { opacity: 0.35; transform: scale(0.97); }
+            50% { opacity: 0.75; transform: scale(1.06); }
+        }
+        .animate-glow-pulse {
+            animation: glow-pulse 4.5s ease-in-out infinite;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .animate-spin-slow,
+            .animate-float-slow,
+            .animate-glow-pulse {
+                animation: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans antialiased selection:bg-medical-500 selection:text-white transition-colors duration-300">
+
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/90 dark:bg-slate-950/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/60" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-medical-600 to-sky-500 flex items-center justify-center text-white font-heading font-bold text-xl shadow-lg shadow-medical-500/20 group-hover:scale-105 transition-transform">
+                    ZG
+                </div>
+                <div>
+                    <span class="font-heading font-bold text-lg text-slate-900 dark:text-white block leading-none" data-i18n="name">Zerihun Getachew</span>
+                    <span class="text-xs text-medical-700 dark:text-medical-400 font-semibold" data-i18n="title_sub">Anesthesia Specialist</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center gap-8 font-semibold text-sm text-slate-700 dark:text-slate-300">
+                <a href="#about" class="hover:text-medical-600 dark:hover:text-medical-400 transition-colors" data-i18n="nav_about">About</a>
+                <a href="#rotations" class="hover:text-medical-600 dark:hover:text-medical-400 transition-colors" data-i18n="nav_rotations">Clinical Rotations</a>
+                <a href="#competencies" class="hover:text-medical-600 dark:hover:text-medical-400 transition-colors" data-i18n="nav_competencies">Competencies</a>
+                <a href="#cases" class="hover:text-medical-600 dark:hover:text-medical-400 transition-colors" data-i18n="nav_cases">Case Highlights</a>
+                <a href="#contact" class="hover:text-medical-600 dark:hover:text-medical-400 transition-colors" data-i18n="nav_contact">Contact</a>
+            </nav>
+
+            <!-- Control Buttons (Language Switcher & Theme Toggle) -->
+            <div class="flex items-center gap-3">
+                
+                <!-- Language Switcher Pill -->
+                <div class="bg-slate-100 dark:bg-slate-800/90 p-1 rounded-2xl border border-slate-300 dark:border-slate-700/80 flex items-center shadow-sm">
+                    <button onclick="setLanguage('en')" id="lang-en-btn" class="px-2.5 py-1 rounded-xl text-xs font-bold transition-all text-slate-700 dark:text-slate-300 hover:text-medical-600">
+                        EN
+                    </button>
+                    <button onclick="setLanguage('am')" id="lang-am-btn" class="px-2.5 py-1 rounded-xl text-xs font-bold transition-all text-slate-700 dark:text-slate-300 hover:text-medical-600">
+                        አማ
+                    </button>
+                </div>
+
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle Light and Dark Theme" class="relative group p-2.5 rounded-2xl bg-slate-100 dark:bg-slate-800/80 border border-slate-300 dark:border-slate-700/80 hover:border-medical-500 dark:hover:border-medical-400 transition-all duration-300 shadow-sm flex items-center justify-center">
+                    <div class="relative w-5 h-5 flex items-center justify-center">
+                        <i id="theme-icon-sun" class="fa-solid fa-sun text-amber-400 text-base transform transition-all duration-500 hidden dark:block"></i>
+                        <i id="theme-icon-moon" class="fa-solid fa-moon text-slate-800 text-base transform transition-all duration-500 block dark:hidden"></i>
+                    </div>
+                    <span class="sr-only">Toggle Theme</span>
+                </button>
+
+                <button id="mobile-menu-btn" class="md:hidden text-slate-800 dark:text-slate-300 hover:text-medical-600 dark:hover:text-white p-2 focus:outline-none" aria-label="Toggle Navigation Menu">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 dark:bg-slate-900/95 border-b border-slate-200 dark:border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="block py-2 text-slate-700 dark:text-slate-300 hover:text-medical-600 dark:hover:text-medical-400 font-medium" data-i18n="nav_about">About</a>
+            <a href="#rotations" class="block py-2 text-slate-700 dark:text-slate-300 hover:text-medical-600 dark:hover:text-medical-400 font-medium" data-i18n="nav_rotations">Clinical Rotations</a>
+            <a href="#competencies" class="block py-2 text-slate-700 dark:text-slate-300 hover:text-medical-600 dark:hover:text-medical-400 font-medium" data-i18n="nav_competencies">Competencies</a>
+            <a href="#cases" class="block py-2 text-slate-700 dark:text-slate-300 hover:text-medical-400 font-medium" data-i18n="nav_cases">Case Highlights</a>
+            <a href="#contact" class="block py-2 text-slate-700 dark:text-slate-300 hover:text-medical-400 font-medium" data-i18n="nav_contact">Contact</a>
+            
+            <div class="pt-3 border-t border-slate-200 dark:border-slate-800 space-y-3">
+                <div class="flex items-center justify-between">
+                    <span class="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase" data-i18n="mobile_lang_title">Language / ቋንቋ</span>
+                    <div class="flex gap-2">
+                        <button onclick="setLanguage('en')" class="px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 border text-xs font-bold text-slate-800 dark:text-slate-200">English</button>
+                        <button onclick="setLanguage('am')" class="px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 border text-xs font-bold text-slate-800 dark:text-slate-200">አማርኛ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-medical-500/10 dark:bg-medical-600/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/3 right-10 w-80 h-80 bg-sky-500/10 dark:bg-sky-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Column Text -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-medical-500/10 dark:bg-medical-500/10 border border-medical-500/30 text-medical-800 dark:text-medical-300 text-xs font-bold tracking-wide uppercase">
+                        <span class="w-2 h-2 rounded-full bg-medical-600 dark:bg-medical-400 animate-pulse"></span>
+                        <span data-i18n="hero_badge">4th-Year Anesthesia Student • Asrat Woldeyes Health Campus</span>
+                    </div>
+
+                    <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
+                        <span data-i18n="hero_title_1">Precision Care in</span> <br class="hidden sm:inline" />
+                        <span class="text-gradient" data-i18n="hero_title_2">Anesthesiology & Airway Management</span>
+                    </h1>
+
+                    <p class="text-slate-700 dark:text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal" data-i18n="hero_description">
+                        I am Zerihun Getachew, a dedicated final-year Anesthesia student at Debre Berhan University. Trained across high-volume tertiary centers including Tikur Anbessa Specialized Hospital, specializing in intra-operative patient care, rapid resuscitation, and advanced regional anesthesia.
+                    </p>
+
+                    <!-- Quick Contact Pills -->
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-4 text-xs font-semibold text-slate-800 dark:text-slate-300 pt-2">
+                        <div class="flex items-center gap-2 bg-white dark:bg-slate-900/80 px-3.5 py-2 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm">
+                            <i class="fa-solid fa-hospital text-medical-600 dark:text-medical-400"></i>
+                            <span data-i18n="university_name">Debre Berhan University</span>
+                        </div>
+                        <a href="tel:0944794893" class="flex items-center gap-2 bg-white dark:bg-slate-900/80 px-3.5 py-2 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm hover:border-medical-500/50 transition-colors">
+                            <i class="fa-solid fa-phone text-medical-600 dark:text-medical-400"></i>
+                            <span>+251 94 479 4893</span>
+                        </a>
+                        <a href="mailto:yifrubehailu02@gmail.com" class="flex items-center gap-2 bg-white dark:bg-slate-900/80 px-3.5 py-2 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm hover:border-medical-500/50 transition-colors">
+                            <i class="fa-solid fa-envelope text-medical-600 dark:text-medical-400"></i>
+                            <span>yifrubehailu02@gmail.com</span>
+                        </a>
+                    </div>
+
+                    <!-- Call To Action Buttons -->
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#contact" class="w-full sm:w-auto bg-gradient-to-r from-medical-600 to-medical-500 hover:from-medical-500 hover:to-medical-400 text-white font-semibold px-7 py-3.5 rounded-xl shadow-lg shadow-medical-600/30 transition-all flex items-center justify-center gap-2">
+                            <span data-i18n="btn_contact">Initiate Contact</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                        <button onclick="openModal()" class="w-full sm:w-auto bg-slate-100 hover:bg-slate-200 dark:bg-slate-900 dark:hover:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 font-semibold px-7 py-3.5 rounded-xl transition-all flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-file-pdf text-medical-600 dark:text-medical-400"></i>
+                            <span data-i18n="btn_cv">View Academic Summary</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Column: Visual Avatar & Stats -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="absolute -inset-1 rounded-3xl bg-gradient-to-tr from-medical-500 to-sky-500 opacity-20 dark:opacity-30 blur-lg"></div>
+                        
+                        <div class="relative rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 overflow-hidden shadow-xl dark:shadow-2xl">
+                            <!-- Professional Circular Profile Photo -->
+                            <div class="relative mb-6">
+                                <div class="relative mx-auto w-56 sm:w-64 lg:w-72 aspect-square animate-float-slow group">
+                                    <!-- Soft breathing aura -->
+                                    <div class="absolute -inset-4 rounded-full bg-medical-500/25 dark:bg-medical-600/20 blur-2xl animate-glow-pulse pointer-events-none"></div>
+
+                                    <!-- Rotating gradient ring -->
+                                    <div class="absolute inset-0 rounded-full animate-spin-slow profile-ring pointer-events-none"></div>
+
+                                    <!-- Circular photo -->
+                                    <div class="absolute inset-[6px] rounded-full overflow-hidden border-4 border-white dark:border-slate-900 shadow-2xl shadow-medical-900/30 dark:shadow-black/50">
+                                        <img src="profile-photo.jpg" alt="Zerihun Getachew" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110">
+                                        <div class="absolute inset-0 ring-1 ring-inset ring-white/20 pointer-events-none"></div>
+                                        <div class="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-slate-950/40 to-transparent pointer-events-none"></div>
+                                    </div>
+
+                                    <!-- Availability badge -->
+                                    <div class="absolute bottom-2 right-2 w-7 h-7 rounded-full bg-emerald-500 ring-4 ring-white dark:ring-slate-900 flex items-center justify-center shadow-lg shadow-emerald-500/40">
+                                        <span class="relative flex h-2.5 w-2.5">
+                                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                                            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-white"></span>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <!-- Name & Degree -->
+                                <div class="text-center mt-5">
+                                    <p class="font-heading font-bold text-xl text-slate-900 dark:text-white" data-i18n="name">Zerihun Getachew</p>
+                                    <p class="text-medical-700 dark:text-medical-400 text-xs font-semibold mt-1" data-i18n="degree_sub">B.Sc. Candidate in Anesthesia</p>
+                                </div>
+                            </div>
+
+                            <!-- Live Stat Cards -->
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+                                    <div class="text-2xl font-bold font-heading text-medical-700 dark:text-medical-400">100+</div>
+                                    <div class="text-xs text-slate-600 dark:text-slate-400 font-medium mt-0.5" data-i18n="stat_cases">Clinical Cases Managed</div>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
+                                    <div class="text-2xl font-bold font-heading text-sky-700 dark:text-sky-400">4 Major</div>
+                                    <div class="text-xs text-slate-600 dark:text-slate-400 font-medium mt-0.5" data-i18n="stat_hospitals">Referral Hospitals</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-slate-100/60 dark:bg-slate-900/50 border-y border-slate-200 dark:border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-xs font-bold tracking-widest text-medical-700 dark:text-medical-400 uppercase mb-2" data-i18n="about_subtitle">Professional Background</h2>
+                <p class="font-heading text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white" data-i18n="about_title">Dedicated to Surgical Safety & Patient Comfort</p>
+                <div class="w-16 h-1 bg-medical-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Academic Profile -->
+                <div class="glass-card rounded-2xl p-8 hover:border-medical-500/50 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-medical-500/10 border border-medical-500/20 flex items-center justify-center text-medical-600 dark:text-medical-400 text-xl mb-6">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-slate-900 dark:text-white mb-3" data-i18n="card1_title">Academic Excellence</h3>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4" data-i18n="card1_desc">
+                        Currently enrolled in the rigorous 4th-year B.Sc. Anesthesia program at Debre Berhan University (Asrat Woldeyes Health Campus). Mastering essential medical sciences, pharmacology, pathophysiology, and surgical anesthesia management.
+                    </p>
+                    <ul class="text-xs text-slate-600 dark:text-slate-400 font-medium space-y-2 border-t border-slate-200 dark:border-slate-800 pt-4">
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-medical-600 dark:text-medical-400"></i>
+                            <span data-i18n="card1_bullet1">Department of Anesthesia & Critical Care</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-medical-600 dark:text-medical-400"></i>
+                            <span data-i18n="card1_bullet2">Advanced Airway & Resuscitation Modules</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Clinical Commitment -->
+                <div class="glass-card rounded-2xl p-8 hover:border-medical-500/50 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-600 dark:text-sky-400 text-xl mb-6">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-slate-900 dark:text-white mb-3" data-i18n="card2_title">Clinical Philosophy</h3>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4" data-i18n="card2_desc">
+                        Driven by a commitment to zero-avoidable-harm in operating rooms. Emphasizing methodical pre-operative evaluations, individualized anesthetic plan formulation, rapid intra-operative crisis response, and vigilant post-anesthetic monitoring.
+                    </p>
+                    <ul class="text-xs text-slate-600 dark:text-slate-400 font-medium space-y-2 border-t border-slate-200 dark:border-slate-800 pt-4">
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-sky-600 dark:text-sky-400"></i>
+                            <span data-i18n="card2_bullet1">Patient-Centered Anesthetic Planning</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-sky-600 dark:text-sky-400"></i>
+                            <span data-i18n="card2_bullet2">Strict Adherence to Surgical Safety Protocols</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Professional Vision -->
+                <div class="glass-card rounded-2xl p-8 hover:border-medical-500/50 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-600 dark:text-emerald-400 text-xl mb-6">
+                        <i class="fa-solid fa-compass"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-slate-900 dark:text-white mb-3" data-i18n="card3_title">Future Readiness</h3>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4" data-i18n="card3_desc">
+                        Preparing for immediate entry into major clinical, surgical, and emergency health setups. Equipped with procedural adaptability, strong inter-professional team communication, and an eagerness to stay updated with modern anesthesia technologies.
+                    </p>
+                    <ul class="text-xs text-slate-600 dark:text-slate-400 font-medium space-y-2 border-t border-slate-200 dark:border-slate-800 pt-4">
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-emerald-600 dark:text-emerald-400"></i>
+                            <span data-i18n="card3_bullet1">Ready for Emergency & Elective Surgery</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-emerald-600 dark:text-emerald-400"></i>
+                            <span data-i18n="card3_bullet2">Continuous Medical Education Focused</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="rotations" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-xs font-bold tracking-widest text-medical-700 dark:text-medical-400 uppercase mb-2" data-i18n="rotations_subtitle">Hospital Experience</h2>
+                <p class="font-heading text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white" data-i18n="rotations_title">Clinical Rotations & Practicum</p>
+                <p class="text-slate-600 dark:text-slate-400 mt-3 text-sm" data-i18n="rotations_desc">Extensive hands-on training completed across high-capacity regional and national referral centers.</p>
+            </div>
+
+            <div class="space-y-8">
+                <!-- Rotation 1: Tikur Anbessa -->
+                <div class="glass-card rounded-2xl p-6 sm:p-8 hover:border-slate-300 dark:hover:border-slate-700 transition-all">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-slate-200 dark:border-slate-800">
+                        <div class="flex items-start gap-4">
+                            <div class="w-14 h-14 rounded-2xl bg-medical-500/10 border border-medical-500/20 flex-shrink-0 flex items-center justify-center text-medical-600 dark:text-medical-400 text-2xl">
+                                <i class="fa-solid fa-hospital-user"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-heading text-2xl font-bold text-slate-900 dark:text-white" data-i18n="tikur_title">Tikur Anbessa Specialized Hospital</h3>
+                                <p class="text-medical-700 dark:text-medical-400 text-sm font-semibold" data-i18n="tikur_sub">Tertiary National Referral Center • Addis Ababa, Ethiopia</p>
+                            </div>
+                        </div>
+                        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold self-start lg:self-center">
+                            <i class="fa-regular fa-calendar text-medical-600 dark:text-medical-400"></i> <span data-i18n="tikur_tag">Major Clinical Rotation</span>
+                        </span>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6 mt-6">
+                        <div>
+                            <h4 class="text-sm font-semibold text-slate-800 dark:text-slate-200 uppercase tracking-wider mb-3 flex items-center gap-2">
+                                <i class="fa-solid fa-list-check text-medical-600 dark:text-medical-400"></i> <span data-i18n="core_resp">Core Clinical Responsibilities</span>
+                            </h4>
+                            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-angle-right text-medical-600 dark:text-medical-400 mt-1"></i>
+                                    <span data-i18n="tikur_task1">Assisted and administered general anesthesia for complex pediatric, neurosurgical, and cardiothoracic surgeries under consultant supervision.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-angle-right text-medical-600 dark:text-medical-400 mt-1"></i>
+                                    <span data-i18n="tikur_task2">Managed difficult airways utilizing video laryngoscopy, fiberoptic guidance, and laryngeal mask airways (LMA).</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-angle-right text-medical-600 dark:text-medical-400 mt-1"></i>
+                                    <span data-i18n="tikur_task3">Conducted pre-anesthetic risk assessments (ASA scoring) and optimized high-risk patients pre-operatively.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="text-sm font-semibold text-slate-800 dark:text-slate-200 uppercase tracking-wider mb-3 flex items-center gap-2">
+                                <i class="fa-solid fa-briefcase-medical text-sky-600 dark:text-sky-400"></i> <span data-i18n="proc_mastery">Procedures & Mastery</span>
+                            </h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 font-medium">Endotracheal Intubation</span>
+                                <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 font-medium">Spinal & Epidural Anesthesia</span>
+                                <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 font-medium">Arterial Line Setup</span>
+                                <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 font-medium">Pediatric Anesthesia protocol</span>
+                                <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 font-medium">PACU Recovery Management</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rotation 2: Hakim Gizaw -->
+                <div class="glass-card rounded-2xl p-6 sm:p-8 hover:border-slate-300 dark:hover:border-slate-700 transition-all">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-slate-200 dark:border-slate-800">
+                        <div class="flex items-start gap-4">
+                            <div class="w-14 h-14 rounded-2xl bg-sky-500/10 border border-sky-500/20 flex-shrink-0 flex items-center justify-center text-sky-600 dark:text-sky-400 text-2xl">
+                                <i class="fa-solid fa-hospital-alt"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-heading text-2xl font-bold text-slate-900 dark:text-white" data-i18n="hakim_title">Hakim Gizaw Hospital</h3>
+                                <p class="text-sky-700 dark:text-sky-400 text-sm font-semibold" data-i18n="hakim_sub">General Surgical & Emergency Center • Debre Berhan, Ethiopia</p>
+                            </div>
+                        </div>
+                        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold self-start lg:self-center">
+                            <i class="fa-regular fa-calendar text-sky-600 dark:text-sky-400"></i> <span data-i18n="hakim_tag">Clinical Practicum Rotation</span>
+                        </span>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6 mt-6">
+                        <div>
+                            <h4 class="text-sm font-semibold text-slate-800 dark:text-slate-200 uppercase tracking-wider mb-3 flex items-center gap-2">
+                                <i class="fa-solid fa-list-check text-sky-600 dark:text-sky-400"></i> <span data-i18n="core_resp">Core Clinical Responsibilities</span>
+                            </h4>
+                            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-angle-right text-sky-600 dark:text-sky-400 mt-1"></i>
+                                    <span data-i18n="hakim_task1">Handled emergency surgical cases, including trauma, acute abdomen, and emergency obstetric cesarean sections.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-angle-right text-sky-600 dark:text-sky-400 mt-1"></i>
+                                    <span data-i18n="hakim_task2">Performed subarachnoid blocks (spinal anesthesia) independently for lower abdominal and orthopedic procedures.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-angle-right text-sky-600 dark:text-sky-400 mt-1"></i>
+                                    <span data-i18n="hakim_task3">Monitored hemodynamic parameters, intra-operative fluid therapy, blood loss, and vital sign alterations.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="text-sm font-semibold text-slate-800 dark:text-slate-200 uppercase tracking-wider mb-3 flex items-center gap-2">
+                                <i class="fa-solid fa-briefcase-medical text-sky-600 dark:text-sky-400"></i> <span data-i18n="proc_mastery">Procedures & Mastery</span>
+                            </h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 font-medium">Obstetric Anesthesia</span>
+                                <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 font-medium">Subarachnoid Block</span>
+                                <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 font-medium">Intra-operative Fluid Resuscitation</span>
+                                <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 font-medium">Emergency Airway Intervention</span>
+                                <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 font-medium">Post-Operative Analgesia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rotation 3: St. Petros Comprehensive Specialized Hospital -->
+                <div class="glass-card rounded-2xl p-6 sm:p-8 hover:border-slate-300 dark:hover:border-slate-700 transition-all">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-slate-200 dark:border-slate-800">
+                        <div class="flex items-start gap-4">
+                            <div class="w-14 h-14 rounded-2xl bg-teal-500/10 border border-teal-500/20 flex-shrink-0 flex items-center justify-center text-teal-600 dark:text-teal-400 text-2xl">
+                                <i class="fa-solid fa-hospital"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-heading text-2xl font-bold text-slate-900 dark:text-white" data-i18n="stpetros_title">St. Petros Comprehensive Specialized Hospital</h3>
+                                <p class="text-teal-700 dark:text-teal-400 text-sm font-semibold" data-i18n="stpetros_sub">Comprehensive Specialized Referral Center • Addis Ababa, Ethiopia</p>
+                            </div>
+                        </div>
+                        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold self-start lg:self-center">
+                            <i class="fa-regular fa-calendar text-teal-600 dark:text-teal-400"></i> <span data-i18n="stpetros_tag">Comprehensive Surgical Rotation</span>
+                        </span>
+                    </div>
+
+                    <div class="mt-6">
+                        <h4 class="text-sm font-semibold text-slate-800 dark:text-slate-200 uppercase tracking-wider mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-briefcase-medical text-teal-600 dark:text-teal-400"></i> <span data-i18n="surg_subspecs">Surgical Subspecialties Covered</span>
+                        </h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 font-medium">General Surgery</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 font-medium">Thoracic Surgery</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 font-medium">Esophageal Surgery</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 font-medium">Gastrointestinal Surgery</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 font-medium">Hepatobiliary Surgery</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 font-medium">Breast Surgery</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 font-medium">Oncologic Surgery</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 font-medium">Orthopedic Surgery</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 font-medium">(ENT) Surgery</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 font-medium">Urologic Surgery</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 font-medium">Pediatric Surgery</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 font-medium">Gynecologic Surgery</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 font-medium">Obstetric Surgery</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rotation 4: Menelik II -->
+                <div class="glass-card rounded-2xl p-6 sm:p-8 hover:border-slate-300 dark:hover:border-slate-700 transition-all">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-slate-200 dark:border-slate-800">
+                        <div class="flex items-start gap-4">
+                            <div class="w-14 h-14 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex-shrink-0 flex items-center justify-center text-indigo-600 dark:text-indigo-400 text-2xl">
+                                <i class="fa-solid fa-hospital-symbol"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-heading text-2xl font-bold text-slate-900 dark:text-white" data-i18n="menelik_title">Menelik II Comprehensive Specialized Hospital</h3>
+                                <p class="text-indigo-700 dark:text-indigo-400 text-sm font-semibold" data-i18n="menelik_sub">Comprehensive Specialized Referral Center • Addis Ababa, Ethiopia</p>
+                            </div>
+                        </div>
+                        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold self-start lg:self-center">
+                            <i class="fa-regular fa-calendar text-indigo-600 dark:text-indigo-400"></i> <span data-i18n="menelik_tag">Comprehensive Surgical Rotation</span>
+                        </span>
+                    </div>
+
+                    <div class="mt-6">
+                        <h4 class="text-sm font-semibold text-slate-800 dark:text-slate-200 uppercase tracking-wider mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-briefcase-medical text-indigo-600 dark:text-indigo-400"></i> <span data-i18n="surg_subspecs">Surgical Subspecialties Covered</span>
+                        </h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 font-medium">General Surgery</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 font-medium">Thoracic Surgery</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 font-medium">Esophageal Surgery</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 font-medium">Gastrointestinal Surgery</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 font-medium">Hepatobiliary Surgery</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 font-medium">Breast Surgery</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 font-medium">Oncologic Surgery</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 font-medium">Orthopedic Surgery</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 font-medium">(ENT) Surgery</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 font-medium">Urologic Surgery</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 font-medium">Pediatric Surgery</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 font-medium">Gynecologic Surgery</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 font-medium">Obstetric Surgery</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="competencies" class="py-20 bg-slate-100/60 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <h2 class="text-xs font-bold tracking-widest text-medical-700 dark:text-medical-400 uppercase mb-2" data-i18n="skills_subtitle">Technical Proficiency</h2>
+                <p class="font-heading text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white" data-i18n="skills_title">Core Clinical Competencies</p>
+                <p class="text-slate-600 dark:text-slate-400 mt-2 text-sm" data-i18n="skills_desc">Interactive overview of skills developed through clinical practice and academic study.</p>
+            </div>
+
+            <!-- Tab Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-10" id="skill-tabs">
+                <button onclick="switchTab('airway')" id="tab-airway" class="tab-btn px-5 py-2.5 rounded-xl font-semibold text-xs sm:text-sm transition-all bg-medical-600 text-white shadow-md shadow-medical-600/30">
+                    <i class="fa-solid fa-wind mr-2"></i> <span data-i18n="tab_airway">Airway Management</span>
+                </button>
+                <button onclick="switchTab('pharmacology')" id="tab-pharmacology" class="tab-btn px-5 py-2.5 rounded-xl font-semibold text-xs sm:text-sm transition-all bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white border border-slate-300 dark:border-slate-800 shadow-sm">
+                    <i class="fa-solid fa-pills mr-2"></i> <span data-i18n="tab_pharm">Pharmacology & Induction</span>
+                </button>
+                <button onclick="switchTab('monitoring')" id="tab-monitoring" class="tab-btn px-5 py-2.5 rounded-xl font-semibold text-xs sm:text-sm transition-all bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white border border-slate-300 dark:border-slate-800 shadow-sm">
+                    <i class="fa-solid fa-heart-pulse mr-2"></i> <span data-i18n="tab_monitor">Patient Monitoring</span>
+                </button>
+                <button onclick="switchTab('emergency')" id="tab-emergency" class="tab-btn px-5 py-2.5 rounded-xl font-semibold text-xs sm:text-sm transition-all bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white border border-slate-300 dark:border-slate-800 shadow-sm">
+                    <i class="fa-solid fa-kit-medical mr-2"></i> <span data-i18n="tab_emerg">Resuscitation & PACU</span>
+                </button>
+            </div>
+
+            <!-- Tab Contents -->
+            <div id="tab-content" class="glass-card rounded-2xl p-6 sm:p-10 min-h-[300px]">
+                
+                <!-- Airway Management Content -->
+                <div id="content-airway" class="tab-pane">
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <h3 class="font-heading text-2xl font-bold text-slate-900 dark:text-white mb-4" data-i18n="airway_head">Advanced Airway Management</h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6" data-i18n="airway_desc">
+                                Proficient in securing difficult airways under high-pressure elective and emergency conditions. Trained in applying various tools and predictive airway algorithms.
+                            </p>
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="flex justify-between text-xs font-semibold text-slate-800 dark:text-slate-300 mb-1">
+                                        <span data-i18n="airway_s1">Endotracheal Intubation (Direct & Video Laryngoscopy)</span>
+                                        <span class="text-medical-700 dark:text-medical-400">95%</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-slate-200 dark:bg-slate-800">
+                                        <div class="h-2 rounded-full bg-medical-500 w-[95%]"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs font-semibold text-slate-800 dark:text-slate-300 mb-1">
+                                        <span data-i18n="airway_s2">Supraglottic Airway Insertion (LMA/i-gel)</span>
+                                        <span class="text-medical-700 dark:text-medical-400">90%</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-slate-200 dark:bg-slate-800">
+                                        <div class="h-2 rounded-full bg-medical-500 w-[90%]"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs font-semibold text-slate-800 dark:text-slate-300 mb-1">
+                                        <span data-i18n="airway_s3">Bag-Valve-Mask Ventilation & Difficult Airway Algorithm</span>
+                                        <span class="text-medical-700 dark:text-medical-400">92%</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-slate-200 dark:bg-slate-800">
+                                        <div class="h-2 rounded-full bg-medical-500 w-[92%]"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-slate-50 dark:bg-slate-900/80 rounded-xl p-6 border border-slate-200 dark:border-slate-800">
+                            <h4 class="text-sm font-bold text-medical-700 dark:text-medical-400 uppercase tracking-wider mb-4" data-i18n="highlight_comp">Highlighted Competencies</h4>
+                            <ul class="space-y-3 text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium">
+                                <li class="flex items-center gap-3">
+                                    <i class="fa-solid fa-circle-dot text-medical-600 dark:text-medical-400"></i>
+                                    <span data-i18n="airway_h1">Mallampati scoring and airway risk prediction</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i class="fa-solid fa-circle-dot text-medical-600 dark:text-medical-400"></i>
+                                    <span data-i18n="airway_h2">Rapid Sequence Induction and Intubation (RSII)</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i class="fa-solid fa-circle-dot text-medical-600 dark:text-medical-400"></i>
+                                    <span data-i18n="airway_h3">Awake intubation preparation protocols</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i class="fa-solid fa-circle-dot text-medical-600 dark:text-medical-400"></i>
+                                    <span data-i18n="airway_h4">Management of accidental extubation crises</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pharmacology Content -->
+                <div id="content-pharmacology" class="tab-pane hidden">
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <h3 class="font-heading text-2xl font-bold text-slate-900 dark:text-white mb-4" data-i18n="pharm_head">Anesthetic Pharmacology & Induction</h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6" data-i18n="pharm_desc">
+                                In-depth understanding of pharmacokinetics, pharmacodynamics, dosage calculations, and drug interactions for intravenous and volatile anesthetic agents.
+                            </p>
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="flex justify-between text-xs font-semibold text-slate-800 dark:text-slate-300 mb-1">
+                                        <span data-i18n="pharm_s1">IV Hypnotics (Propofol, Ketamine, Thiopental)</span>
+                                        <span class="text-sky-700 dark:text-sky-400">92%</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-slate-200 dark:bg-slate-800">
+                                        <div class="h-2 rounded-full bg-sky-500 w-[92%]"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs font-semibold text-slate-800 dark:text-slate-300 mb-1">
+                                        <span data-i18n="pharm_s2">Neuromuscular Blockers & Reversal Agents</span>
+                                        <span class="text-sky-700 dark:text-sky-400">90%</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-slate-200 dark:bg-slate-800">
+                                        <div class="h-2 rounded-full bg-sky-500 w-[90%]"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs font-semibold text-slate-800 dark:text-slate-300 mb-1">
+                                        <span data-i18n="pharm_s3">Volatile Inhalational Agents (Isoflurane, Sevoflurane)</span>
+                                        <span class="text-sky-700 dark:text-sky-400">88%</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-slate-200 dark:bg-slate-800">
+                                        <div class="h-2 rounded-full bg-sky-500 w-[88%]"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-slate-50 dark:bg-slate-900/80 rounded-xl p-6 border border-slate-200 dark:border-slate-800">
+                            <h4 class="text-sm font-bold text-sky-700 dark:text-sky-400 uppercase tracking-wider mb-4" data-i18n="highlight_comp">Highlighted Competencies</h4>
+                            <ul class="space-y-3 text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium">
+                                <li class="flex items-center gap-3">
+                                    <i class="fa-solid fa-circle-dot text-sky-600 dark:text-sky-400"></i>
+                                    <span data-i18n="pharm_h1">Balanced multi-modal general anesthesia regimens</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i class="fa-solid fa-circle-dot text-sky-600 dark:text-sky-400"></i>
+                                    <span data-i18n="pharm_h2">Opioid titration and multi-modal analgesia</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i class="fa-solid fa-circle-dot text-sky-600 dark:text-sky-400"></i>
+                                    <span data-i18n="pharm_h3">Vasopressor and inotropic drug management</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i class="fa-solid fa-circle-dot text-sky-600 dark:text-sky-400"></i>
+                                    <span data-i18n="pharm_h4">Local anesthetic systemic toxicity (LAST) prevention</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Patient Monitoring Content -->
+                <div id="content-monitoring" class="tab-pane hidden">
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <h3 class="font-heading text-2xl font-bold text-slate-900 dark:text-white mb-4" data-i18n="monitor_head">Intra-operative Patient Monitoring</h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6" data-i18n="monitor_desc">
+                                Continuous vigilance using standard and advanced non-invasive and invasive monitoring systems to guarantee stability throughout procedures.
+                            </p>
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="flex justify-between text-xs font-semibold text-slate-800 dark:text-slate-300 mb-1">
+                                        <span data-i18n="monitor_s1">Capnography (EtCO2) & Waveform Interpretation</span>
+                                        <span class="text-emerald-700 dark:text-emerald-400">95%</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-slate-200 dark:bg-slate-800">
+                                        <div class="h-2 rounded-full bg-emerald-500 w-[95%]"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs font-semibold text-slate-800 dark:text-slate-300 mb-1">
+                                        <span data-i18n="monitor_s2">ECG Monitoring & Dysrhythmia Recognition</span>
+                                        <span class="text-emerald-700 dark:text-emerald-400">88%</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-slate-200 dark:bg-slate-800">
+                                        <div class="h-2 rounded-full bg-emerald-500 w-[88%]"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs font-semibold text-slate-800 dark:text-slate-300 mb-1">
+                                        <span data-i18n="monitor_s3">Hemodynamic & Invasive Line Management</span>
+                                        <span class="text-emerald-700 dark:text-emerald-400">85%</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-slate-200 dark:bg-slate-800">
+                                        <div class="h-2 rounded-full bg-emerald-500 w-[85%]"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-slate-50 dark:bg-slate-900/80 rounded-xl p-6 border border-slate-200 dark:border-slate-800">
+                            <h4 class="text-sm font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider mb-4" data-i18n="highlight_comp">Highlighted Competencies</h4>
+                            <ul class="space-y-3 text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium">
+                                <li class="flex items-center gap-3">
+                                    <i class="fa-solid fa-circle-dot text-emerald-600 dark:text-emerald-400"></i>
+                                    <span data-i18n="monitor_h1">Anesthesia Workstation pre-use inspection</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i class="fa-solid fa-circle-dot text-emerald-600 dark:text-emerald-400"></i>
+                                    <span data-i18n="monitor_h2">Real-time capnography troubleshooting</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i class="fa-solid fa-circle-dot text-emerald-600 dark:text-emerald-400"></i>
+                                    <span data-i18n="monitor_h3">Intra-operative fluid and blood product balance</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i class="fa-solid fa-circle-dot text-emerald-600 dark:text-emerald-400"></i>
+                                    <span data-i18n="monitor_h4">Hypothermia prevention and active warming protocols</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Emergency & PACU Content -->
+                <div id="content-emergency" class="tab-pane hidden">
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <h3 class="font-heading text-2xl font-bold text-slate-900 dark:text-white mb-4" data-i18n="emerg_head">Emergency Resuscitation & PACU</h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6" data-i18n="emerg_desc">
+                                Skillfully managing critical post-operative recovery, emergent intra-operative complications, and resuscitation procedures.
+                            </p>
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="flex justify-between text-xs font-semibold text-slate-800 dark:text-slate-300 mb-1">
+                                        <span data-i18n="emerg_s1">BLS / ACLS Protocol Execution</span>
+                                        <span class="text-amber-700 dark:text-amber-400">94%</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-slate-200 dark:bg-slate-800">
+                                        <div class="h-2 rounded-full bg-amber-500 w-[94%]"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs font-semibold text-slate-800 dark:text-slate-300 mb-1">
+                                        <span data-i18n="emerg_s2">PACU Post-Anesthesia Discharge Scoring (Aldrete)</span>
+                                        <span class="text-amber-700 dark:text-amber-400">92%</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-slate-200 dark:bg-slate-800">
+                                        <div class="h-2 rounded-full bg-amber-500 w-[92%]"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs font-semibold text-slate-800 dark:text-slate-300 mb-1">
+                                        <span data-i18n="emerg_s3">Management of Laryngospasm & Bronchospasm</span>
+                                        <span class="text-amber-700 dark:text-amber-400">90%</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-slate-200 dark:bg-slate-800">
+                                        <div class="h-2 rounded-full bg-amber-500 w-[90%]"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-slate-50 dark:bg-slate-900/80 rounded-xl p-6 border border-slate-200 dark:border-slate-800">
+                            <h4 class="text-sm font-bold text-amber-700 dark:text-amber-400 uppercase tracking-wider mb-4" data-i18n="highlight_comp">Highlighted Competencies</h4>
+                            <ul class="space-y-3 text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium">
+                                <li class="flex items-center gap-3">
+                                    <i class="fa-solid fa-circle-dot text-amber-600 dark:text-amber-400"></i>
+                                    <span data-i18n="emerg_h1">Acute post-operative pain management protocols</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i class="fa-solid fa-circle-dot text-amber-600 dark:text-amber-400"></i>
+                                    <span data-i18n="emerg_h2">PONV (Post-Operative Nausea & Vomiting) mitigation</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i class="fa-solid fa-circle-dot text-amber-600 dark:text-amber-400"></i>
+                                    <span data-i18n="emerg_h3">Immediate triage and stabilization during massive hemorrhage</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i class="fa-solid fa-circle-dot text-amber-600 dark:text-amber-400"></i>
+                                    <span data-i18n="emerg_h4">Delayed emergence evaluation and management</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="cases" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-xs font-bold tracking-widest text-medical-700 dark:text-medical-400 uppercase mb-2" data-i18n="cases_subtitle">Practical Experience</h2>
+                <p class="font-heading text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white" data-i18n="cases_title">Clinical Highlights & Cases</p>
+                <p class="text-slate-600 dark:text-slate-400 mt-2 text-sm" data-i18n="cases_desc">Key case categories successfully managed under faculty supervision.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Case Card 1 -->
+                <div class="glass-card rounded-2xl p-6 hover:border-medical-500/50 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded-md bg-medical-500/10 text-medical-800 dark:text-medical-400 border border-medical-500/20" data-i18n="case1_badge">Obstetrics</span>
+                            <span class="text-xs text-slate-500 font-medium" data-i18n="case1_type">Emergency & Elective</span>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg text-slate-900 dark:text-white mb-2" data-i18n="case1_head">Emergency Cesarean Section Anesthesia</h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed mb-4" data-i18n="case1_text">
+                            Performed subarachnoid block for urgent C-section cases. Successfully managed hemodynamic stability, prevented maternal hypotension with fluid boluses and vasopressors.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs text-slate-600 dark:text-slate-400 font-medium">
+                        <span><i class="fa-solid fa-check text-medical-600 dark:text-medical-400 mr-1"></i> <span data-i18n="spinal_tag">Spinal Anesthesia</span></span>
+                        <span data-i18n="hakim_short">Hakim Gizaw Hospital</span>
+                    </div>
+                </div>
+
+                <!-- Case Card 2 -->
+                <div class="glass-card rounded-2xl p-6 hover:border-medical-500/50 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded-md bg-sky-500/10 text-sky-800 dark:text-sky-400 border border-sky-500/20" data-i18n="case2_badge">Pediatrics</span>
+                            <span class="text-xs text-slate-500 font-medium" data-i18n="case2_type">Inhalational Induction</span>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg text-slate-900 dark:text-white mb-2" data-i18n="case2_head">Pediatric Surgical Airway Management</h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed mb-4" data-i18n="case2_text">
+                            Managed pediatric general anesthesia using smooth Sevoflurane mask induction, precise endotracheal tube sizing calculations, and careful fluid monitoring.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs text-slate-600 dark:text-slate-400 font-medium">
+                        <span><i class="fa-solid fa-check text-sky-600 dark:text-sky-400 mr-1"></i> <span data-i18n="ped_tag">Inhalational Induction</span></span>
+                        <span data-i18n="tikur_short">Tikur Anbessa Hospital</span>
+                    </div>
+                </div>
+
+                <!-- Case Card 3 -->
+                <div class="glass-card rounded-2xl p-6 hover:border-medical-500/50 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-800 dark:text-emerald-400 border border-emerald-500/20" data-i18n="case3_badge">Orthopedics</span>
+                            <span class="text-xs text-slate-500 font-medium" data-i18n="case3_type">Trauma & Reconstructive</span>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg text-slate-900 dark:text-white mb-2" data-i18n="case3_head">Regional Anesthesia for Limb Trauma</h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed mb-4" data-i18n="case3_text">
+                            Assisted in peripheral nerve blocks and subarachnoid blocks for lower limb fracture repair, ensuring intra-operative analgesia and reduced post-operative opioid dependence.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs text-slate-600 dark:text-slate-400 font-medium">
+                        <span><i class="fa-solid fa-check text-emerald-600 dark:text-emerald-400 mr-1"></i> <span data-i18n="reg_tag">Regional Block</span></span>
+                        <span data-i18n="hakim_short">Hakim Gizaw Hospital</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications / Education Badge Banner -->
+            <div class="mt-12 rounded-2xl bg-gradient-to-r from-medical-50 via-slate-50 to-white dark:from-medical-900/50 dark:via-slate-900 dark:to-slate-900 border border-medical-300 dark:border-medical-500/30 p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+                <div class="flex items-center gap-5">
+                    <div class="w-16 h-16 rounded-2xl bg-medical-500/20 border border-medical-500/40 flex items-center justify-center text-medical-700 dark:text-medical-300 text-3xl">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-heading font-bold text-xl text-slate-900 dark:text-white" data-i18n="qual_head">Academic Qualifications & Training</h4>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm mt-1" data-i18n="qual_sub">Debre Berhan University • Asrat Woldeyes Health Campus</p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-3">
+                    <span class="px-4 py-2 rounded-xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-xs text-slate-800 dark:text-slate-300 font-medium flex items-center gap-2 shadow-sm">
+                        <i class="fa-solid fa-check-circle text-medical-600 dark:text-medical-400"></i> <span data-i18n="qual_b1">B.Sc. Anesthesia Senior Candidate</span>
+                    </span>
+                    <span class="px-4 py-2 rounded-xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-xs text-slate-800 dark:text-slate-300 font-medium flex items-center gap-2 shadow-sm">
+                        <i class="fa-solid fa-check-circle text-medical-600 dark:text-medical-400"></i> <span data-i18n="qual_b2">BLS/ACLS Trained</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-slate-100/60 dark:bg-slate-900/60 border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-xs font-bold tracking-widest text-medical-700 dark:text-medical-400 uppercase mb-2" data-i18n="contact_subtitle">Get In Touch</h2>
+                <p class="font-heading text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white" data-i18n="contact_title">Contact Zerihun Getachew</p>
+                <p class="text-slate-600 dark:text-slate-400 mt-2 text-sm" data-i18n="contact_desc">Open for clinical opportunities, hospital placements, and professional consultations.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Info Card -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="glass-card rounded-2xl p-8 space-y-6">
+                        <h3 class="font-heading font-bold text-xl text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-800 pb-4" data-i18n="direct_contact">Direct Contact Details</h3>
+
+                        <!-- Phone -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-medical-500/10 border border-medical-500/20 flex-shrink-0 flex items-center justify-center text-medical-600 dark:text-medical-400 text-lg">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase" data-i18n="lbl_phone">Phone Number</p>
+                                <a href="tel:0944794893" class="text-slate-900 dark:text-white font-semibold text-lg hover:text-medical-600 dark:hover:text-medical-400 transition-colors">0944794893</a>
+                                <p class="text-xs text-slate-500 mt-0.5" data-i18n="sub_phone">Available for professional calls</p>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 flex-shrink-0 flex items-center justify-center text-sky-600 dark:text-sky-400 text-lg">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase" data-i18n="lbl_email">Email Address</p>
+                                <a href="mailto:yifrubehailu02@gmail.com" class="text-slate-900 dark:text-white font-semibold text-base sm:text-lg hover:text-sky-600 dark:hover:text-sky-400 transition-colors break-all">yifrubehailu02@gmail.com</a>
+                                <p class="text-xs text-slate-500 mt-0.5" data-i18n="sub_email">Direct email correspondence</p>
+                            </div>
+                        </div>
+
+                        <!-- Campus Location -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex-shrink-0 flex items-center justify-center text-emerald-600 dark:text-emerald-400 text-lg">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase" data-i18n="lbl_location">Primary Location</p>
+                                <p class="text-slate-900 dark:text-white font-semibold" data-i18n="val_location">Debre Berhan University</p>
+                                <p class="text-xs text-slate-600 dark:text-slate-400" data-i18n="val_campus">Asrat Woldeyes Health Campus, Ethiopia</p>
+                            </div>
+                        </div>
+
+                        <!-- Telegram -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 flex-shrink-0 flex items-center justify-center text-sky-500 text-lg">
+                                <i class="fa-brands fa-telegram"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase">Telegram</p>
+                                <a href="https://t.me/Zeru212729" target="_blank" rel="noopener noreferrer" class="text-slate-900 dark:text-white font-semibold text-base hover:text-sky-500 transition-colors">@Zeru212729</a>
+                                <p class="text-xs text-slate-500 mt-0.5">Direct Telegram message</p>
+                            </div>
+                        </div>
+
+                        <!-- YouTube -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex-shrink-0 flex items-center justify-center text-red-500 text-lg">
+                                <i class="fa-brands fa-youtube"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase">YouTube Channel</p>
+                                <a href="https://youtube.com/channel/UCtgQGl2KolONB-2KIMc3Muw?si=bIA-Ny-Je4S2HpzG" target="_blank" rel="noopener noreferrer" class="text-slate-900 dark:text-white font-semibold text-sm hover:text-red-500 transition-colors break-all">Visit Channel</a>
+                                <p class="text-xs text-slate-500 mt-0.5">Educational & Anesthesia Content</p>
+                            </div>
+                        </div>
+
+                        <!-- LinkedIn -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-blue-600/10 border border-blue-600/20 flex-shrink-0 flex items-center justify-center text-blue-600 text-lg">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase">LinkedIn Profile</p>
+                                <a href="https://www.linkedin.com/in/behailu-yifru-8b508042b?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="text-slate-900 dark:text-white font-semibold text-sm hover:text-blue-600 transition-colors">Behailu Yifru / Professional Profile</a>
+                                <p class="text-xs text-slate-500 mt-0.5">Professional Network</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Availability Callout -->
+                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 leading-relaxed shadow-sm">
+                        <i class="fa-solid fa-circle-info text-medical-600 dark:text-medical-400 text-base mb-2 block"></i>
+                        <span data-i18n="availability_notice">Currently completing final year clinical obligations. Available for post-graduation hospital postings, anesthetic research, and clinical internships.</span>
+                    </div>
+                </div>
+
+                <!-- Interactive Contact Form -->
+                <div class="lg:col-span-7">
+                    <div class="glass-card rounded-2xl p-8">
+                        <h3 class="font-heading font-bold text-xl text-slate-900 dark:text-white mb-6" data-i18n="form_title">Send a Message</h3>
+                        
+                        <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-5">
+                            <div class="grid sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-2" data-i18n="form_name">Your Name</label>
+                                    <input type="text" id="input-name" required placeholder="e.g. Dr. Abebe Tadesse" class="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-600 focus:outline-none focus:border-medical-500 transition-colors">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-2" data-i18n="form_contact">Your Email / Phone</label>
+                                    <input type="text" id="input-email" required placeholder="e.g. contact@hospital.gov.et" class="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-600 focus:outline-none focus:border-medical-500 transition-colors">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-2" data-i18n="form_subject">Subject</label>
+                                <input type="text" id="input-subject" required placeholder="e.g. Clinical Placement / Professional Inquiry" class="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-600 focus:outline-none focus:border-medical-500 transition-colors">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-2" data-i18n="form_msg">Message</label>
+                                <textarea id="input-message" rows="4" required placeholder="Write your message or recruitment inquiry here..." class="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-600 focus:outline-none focus:border-medical-500 transition-colors resize-none"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-gradient-to-r from-medical-600 to-medical-500 hover:from-medical-500 hover:to-medical-400 text-white font-semibold py-3.5 rounded-xl shadow-lg shadow-medical-600/30 transition-all flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-paper-plane text-xs"></i>
+                                <span data-i18n="form_btn">Transmit Message</span>
+                            </button>
+                        </form>
+
+                        <div id="form-alert" class="hidden mt-4 p-4 rounded-xl text-xs font-medium"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 bg-slate-200/80 dark:bg-slate-950 border-t border-slate-300 dark:border-slate-900 text-slate-600 dark:text-slate-500 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                <p class="font-medium">&copy; 2026 Zerihun Getachew. All rights reserved.</p>
+                <p class="text-slate-500 dark:text-slate-600 mt-0.5" data-i18n="footer_sub">Anesthesia Practitioner • Debre Berhan University</p>
+            </div>
+            <div class="flex items-center gap-6 text-slate-600 dark:text-slate-400 font-medium">
+                <a href="#about" class="hover:text-medical-600 dark:hover:text-medical-400 transition-colors" data-i18n="nav_about">About</a>
+                <a href="#rotations" class="hover:text-medical-600 dark:hover:text-medical-400 transition-colors" data-i18n="nav_rotations">Rotations</a>
+                <a href="#competencies" class="hover:text-medical-600 dark:hover:text-medical-400 transition-colors" data-i18n="nav_competencies">Skills</a>
+                <a href="#contact" class="hover:text-medical-600 dark:hover:text-medical-400 transition-colors" data-i18n="nav_contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Curriculum Vitae Reader Modal -->
+    <div id="cv-modal" class="fixed inset-0 z-50 bg-slate-900/60 dark:bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4 hidden">
+        <div class="bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-800 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 relative shadow-2xl">
+            <!-- Modal Close Button -->
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-xl p-2">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <!-- Modal Content Header -->
+            <div class="border-b border-slate-200 dark:border-slate-800 pb-6 mb-6">
+                <span class="text-xs font-bold text-medical-700 dark:text-medical-400 tracking-wider uppercase" data-i18n="modal_badge">Official Academic Summary</span>
+                <h3 class="font-heading font-bold text-2xl text-slate-900 dark:text-white mt-1" data-i18n="name">Zerihun Getachew</h3>
+                <p class="text-xs text-slate-600 dark:text-slate-400 mt-1" data-i18n="modal_sub">4th-Year Anesthesia Student | Debre Berhan University (Asrat Woldeyes Health Campus)</p>
+            </div>
+
+            <!-- Modal Body Text -->
+            <div class="space-y-6 text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                <div>
+                    <h4 class="font-bold text-slate-900 dark:text-white uppercase text-xs tracking-wider mb-2 text-medical-700 dark:text-medical-400" data-i18n="modal_e1">Education</h4>
+                    <p class="font-semibold text-slate-900 dark:text-white" data-i18n="modal_e2">Bachelor of Science in Anesthesia (Senior Candidate)</p>
+                    <p class="text-slate-600 dark:text-slate-400 text-xs" data-i18n="modal_e3">Debre Berhan University, Asrat Woldeyes Health Campus</p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-slate-900 dark:text-white uppercase text-xs tracking-wider mb-2 text-medical-700 dark:text-medical-400" data-i18n="modal_r1">Clinical Rotations</h4>
+                    <ul class="list-disc pl-5 space-y-1">
+                        <li data-i18n="modal_r2"><strong class="text-slate-900 dark:text-white">Tikur Anbessa Specialized Hospital (Addis Ababa):</strong> High-volume referral rotations in pediatric, obstetric, emergency, and neurosurgical anesthesia.</li>
+                        <li data-i18n="modal_r3"><strong class="text-slate-900 dark:text-white">Hakim Gizaw Hospital (Debre Berhan):</strong> Emergency resuscitation, spinal anesthesia for obstetric/orthopedic cases, PACU management.</li>
+                        <li data-i18n="modal_r4"><strong class="text-slate-900 dark:text-white">St. Petros Comprehensive Specialized Hospital (Addis Ababa):</strong> Surgical subspecialty clinical experience in General, Thoracic, Esophageal, Gastrointestinal, Hepatobiliary, Breast, Oncologic, Orthopedic, ENT, Urologic, Pediatric, Gynecologic, and Obstetric Surgery.</li>
+                        <li data-i18n="modal_r5"><strong class="text-slate-900 dark:text-white">Menelik II Comprehensive Specialized Hospital (Addis Ababa):</strong> Surgical subspecialty clinical experience in General, Thoracic, Esophageal, Gastrointestinal, Hepatobiliary, Breast, Oncologic, Orthopedic, ENT, Urologic, Pediatric, Gynecologic, and Obstetric Surgery.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-slate-900 dark:text-white uppercase text-xs tracking-wider mb-2 text-medical-700 dark:text-medical-400" data-i18n="modal_p1">Core Proficiencies</h4>
+                    <p class="text-slate-700 dark:text-slate-300" data-i18n="modal_p2">
+                        Pre-anesthetic evaluation, Endotracheal Intubation, Spinal Anesthesia, Pharmacological Dosing, Capnography, Intra-operative Crisis Management, BLS/ACLS.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-slate-900 dark:text-white uppercase text-xs tracking-wider mb-2 text-medical-700 dark:text-medical-400" data-i18n="modal_c1">Contact Information</h4>
+                    <p><span data-i18n="lbl_phone">Phone Number</span>: +251 94 479 4893</p>
+                    <p><span data-i18n="lbl_email">Email Address</span>: yifrubehailu02@gmail.com</p>
+                    <p>Telegram: @Zeru212729</p>
+                    <p>YouTube: https://youtube.com/channel/UCtgQGl2KolONB-2KIMc3Muw?si=bIA-Ny-Je4S2HpzG</p>
+                    <p>LinkedIn: https://www.linkedin.com/in/behailu-yifru-8b508042b</p>
+                </div>
+            </div>
+
+            <!-- Modal Action Buttons -->
+            <div class="mt-8 pt-6 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row justify-end gap-3">
+                <button onclick="window.print()" class="bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-white font-medium px-5 py-2.5 rounded-xl text-xs flex items-center justify-center gap-2 border border-slate-300 dark:border-slate-700">
+                    <i class="fa-solid fa-print"></i> <span data-i18n="modal_print">Print Document</span>
+                </button>
+                <button onclick="closeModal()" class="bg-medical-600 hover:bg-medical-500 text-white font-medium px-5 py-2.5 rounded-xl text-xs flex items-center justify-center" data-i18n="modal_close">
+                    Close Window
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Full English & Amharic Translation Dictionary
+        const translations = {
+            en: {
+                name: "Zerihun Getachew",
+                title_sub: "Anesthesia Specialist",
+                nav_about: "About",
+                nav_rotations: "Clinical Rotations",
+                nav_competencies: "Competencies",
+                nav_cases: "Case Highlights",
+                nav_contact: "Contact",
+                mobile_lang_title: "Language / ቋንቋ",
+                hero_badge: "4th-Year Anesthesia Student • Asrat Woldeyes Health Campus",
+                hero_title_1: "Precision Care in",
+                hero_title_2: "Anesthesiology & Airway Management",
+                hero_description: "I am Zerihun Getachew, a dedicated final-year Anesthesia student at Debre Berhan University. Trained across high-volume tertiary centers including Tikur Anbessa Specialized Hospital, St. Petros Comprehensive Specialized Hospital, and Menelik II Comprehensive Specialized Hospital, specializing in intra-operative patient care, rapid resuscitation, and advanced regional anesthesia.",
+                university_name: "Debre Berhan University",
+                btn_contact: "Initiate Contact",
+                btn_cv: "View Academic Summary",
+                degree_sub: "B.Sc. Candidate in Anesthesia",
+                stat_cases: "Clinical Cases Managed",
+                stat_hospitals: "Referral Hospitals",
+                about_subtitle: "Professional Background",
+                about_title: "Dedicated to Surgical Safety & Patient Comfort",
+                card1_title: "Academic Excellence",
+                card1_desc: "Currently enrolled in the rigorous 4th-year B.Sc. Anesthesia program at Debre Berhan University (Asrat Woldeyes Health Campus). Mastering essential medical sciences, pharmacology, pathophysiology, and surgical anesthesia management.",
+                card1_bullet1: "Department of Anesthesia & Critical Care",
+                card1_bullet2: "Advanced Airway & Resuscitation Modules",
+                card2_title: "Clinical Philosophy",
+                card2_desc: "Driven by a commitment to zero-avoidable-harm in operating rooms. Emphasizing methodical pre-operative evaluations, individualized anesthetic plan formulation, rapid intra-operative crisis response, and vigilant post-anesthetic monitoring.",
+                card2_bullet1: "Patient-Centered Anesthetic Planning",
+                card2_bullet2: "Strict Adherence to Surgical Safety Protocols",
+                card3_title: "Future Readiness",
+                card3_desc: "Preparing for immediate entry into major clinical, surgical, and emergency health setups. Equipped with procedural adaptability, strong inter-professional team communication, and an eagerness to stay updated with modern anesthesia technologies.",
+                card3_bullet1: "Ready for Emergency & Elective Surgery",
+                card3_bullet2: "Continuous Medical Education Focused",
+                rotations_subtitle: "Hospital Experience",
+                rotations_title: "Clinical Rotations & Practicum",
+                rotations_desc: "Extensive hands-on training completed across high-capacity regional and national referral centers.",
+                tikur_title: "Tikur Anbessa Specialized Hospital",
+                tikur_sub: "Tertiary National Referral Center • Addis Ababa, Ethiopia",
+                tikur_tag: "Major Clinical Rotation",
+                tikur_short: "Tikur Anbessa Hospital",
+                core_resp: "Core Clinical Responsibilities",
+                tikur_task1: "Assisted and administered general anesthesia for complex pediatric, neurosurgical, and cardiothoracic surgeries under consultant supervision.",
+                tikur_task2: "Managed difficult airways utilizing video laryngoscopy, fiberoptic guidance, and laryngeal mask airways (LMA).",
+                tikur_task3: "Conducted pre-anesthetic risk assessments (ASA scoring) and optimized high-risk patients pre-operatively.",
+                proc_mastery: "Procedures & Mastery",
+                hakim_title: "Hakim Gizaw Hospital",
+                hakim_sub: "General Surgical & Emergency Center • Debre Berhan, Ethiopia",
+                hakim_tag: "Clinical Practicum Rotation",
+                hakim_short: "Hakim Gizaw Hospital",
+                hakim_task1: "Handled emergency surgical cases, including trauma, acute abdomen, and emergency obstetric cesarean sections.",
+                hakim_task2: "Performed subarachnoid blocks (spinal anesthesia) independently for lower abdominal and orthopedic procedures.",
+                hakim_task3: "Monitored hemodynamic parameters, intra-operative fluid therapy, blood loss, and vital sign alterations.",
+                stpetros_title: "St. Petros Comprehensive Specialized Hospital",
+                stpetros_sub: "Comprehensive Specialized Referral Center • Addis Ababa, Ethiopia",
+                stpetros_tag: "Comprehensive Surgical Rotation",
+                menelik_title: "Menelik II Comprehensive Specialized Hospital",
+                menelik_sub: "Comprehensive Specialized Referral Center • Addis Ababa, Ethiopia",
+                menelik_tag: "Comprehensive Surgical Rotation",
+                surg_subspecs: "Surgical Subspecialties Covered",
+                skills_subtitle: "Technical Proficiency",
+                skills_title: "Core Clinical Competencies",
+                skills_desc: "Interactive overview of skills developed through clinical practice and academic study.",
+                tab_airway: "Airway Management",
+                tab_pharm: "Pharmacology & Induction",
+                tab_monitor: "Patient Monitoring",
+                tab_emerg: "Resuscitation & PACU",
+                airway_head: "Advanced Airway Management",
+                airway_desc: "Proficient in securing difficult airways under high-pressure elective and emergency conditions. Trained in applying various tools and predictive airway algorithms.",
+                airway_s1: "Endotracheal Intubation (Direct & Video Laryngoscopy)",
+                airway_s2: "Supraglottic Airway Insertion (LMA/i-gel)",
+                airway_s3: "Bag-Valve-Mask Ventilation & Difficult Airway Algorithm",
+                highlight_comp: "Highlighted Competencies",
+                airway_h1: "Mallampati scoring and airway risk prediction",
+                airway_h2: "Rapid Sequence Induction and Intubation (RSII)",
+                airway_h3: "Awake intubation preparation protocols",
+                airway_h4: "Management of accidental extubation crises",
+                pharm_head: "Anesthetic Pharmacology & Induction",
+                pharm_desc: "In-depth understanding of pharmacokinetics, pharmacodynamics, dosage calculations, and drug interactions for intravenous and volatile anesthetic agents.",
+                pharm_s1: "IV Hypnotics (Propofol, Ketamine, Thiopental)",
+                pharm_s2: "Neuromuscular Blockers & Reversal Agents",
+                pharm_s3: "Volatile Inhalational Agents (Isoflurane, Sevoflurane)",
+                pharm_h1: "Balanced multi-modal general anesthesia regimens",
+                pharm_h2: "Opioid titration and multi-modal analgesia",
+                pharm_h3: "Vasopressor and inotropic drug management",
+                pharm_h4: "Local anesthetic systemic toxicity (LAST) prevention",
+                monitor_head: "Intra-operative Patient Monitoring",
+                monitor_desc: "Continuous vigilance using standard and advanced non-invasive and invasive monitoring systems to guarantee stability throughout procedures.",
+                monitor_s1: "Capnography (EtCO2) & Waveform Interpretation",
+                monitor_s2: "ECG Monitoring & Dysrhythmia Recognition",
+                monitor_s3: "Hemodynamic & Invasive Line Management",
+                monitor_h1: "Anesthesia Workstation pre-use inspection",
+                monitor_h2: "Real-time capnography troubleshooting",
+                monitor_h3: "Intra-operative fluid and blood product balance",
+                monitor_h4: "Hypothermia prevention and active warming protocols",
+                emerg_head: "Emergency Resuscitation & PACU",
+                emerg_desc: "Skillfully managing critical post-operative recovery, emergent intra-operative complications, and resuscitation procedures.",
+                emerg_s1: "BLS / ACLS Protocol Execution",
+                emerg_s2: "PACU Post-Anesthesia Discharge Scoring (Aldrete)",
+                emerg_s3: "Management of Laryngospasm & Bronchospasm",
+                emerg_h1: "Acute post-operative pain management protocols",
+                emerg_h2: "PONV (Post-Operative Nausea & Vomiting) mitigation",
+                emerg_h3: "Immediate triage and stabilization during massive hemorrhage",
+                emerg_h4: "Delayed emergence evaluation and management",
+                cases_subtitle: "Practical Experience",
+                cases_title: "Clinical Highlights & Cases",
+                cases_desc: "Key case categories successfully managed under faculty supervision.",
+                case1_badge: "Obstetrics",
+                case1_type: "Emergency & Elective",
+                case1_head: "Emergency Cesarean Section Anesthesia",
+                case1_text: "Performed subarachnoid block for urgent C-section cases. Successfully managed hemodynamic stability, prevented maternal hypotension with fluid boluses and vasopressors.",
+                spinal_tag: "Spinal Anesthesia",
+                case2_badge: "Pediatrics",
+                case2_type: "Inhalational Induction",
+                case2_head: "Pediatric Surgical Airway Management",
+                case2_text: "Managed pediatric general anesthesia using smooth Sevoflurane mask induction, precise endotracheal tube sizing calculations, and careful fluid monitoring.",
+                ped_tag: "Inhalational Induction",
+                case3_badge: "Orthopedics",
+                case3_type: "Trauma & Reconstructive",
+                case3_head: "Regional Anesthesia for Limb Trauma",
+                case3_text: "Assisted in peripheral nerve blocks and subarachnoid blocks for lower limb fracture repair, ensuring intra-operative analgesia and reduced post-operative opioid dependence.",
+                reg_tag: "Regional Block",
+                qual_head: "Academic Qualifications & Training",
+                qual_sub: "Debre Berhan University • Asrat Woldeyes Health Campus",
+                qual_b1: "B.Sc. Anesthesia Senior Candidate",
+                qual_b2: "BLS/ACLS Trained",
+                contact_subtitle: "Get In Touch",
+                contact_title: "Contact Zerihun Getachew",
+                contact_desc: "Open for clinical opportunities, hospital placements, and professional consultations.",
+                direct_contact: "Direct Contact Details",
+                lbl_phone: "Phone Number",
+                sub_phone: "Available for professional calls",
+                lbl_email: "Email Address",
+                sub_email: "Direct email correspondence",
+                lbl_location: "Primary Location",
+                val_location: "Debre Berhan University",
+                val_campus: "Asrat Woldeyes Health Campus, Ethiopia",
+                availability_notice: "Currently completing final year clinical obligations. Available for post-graduation hospital postings, anesthetic research, and clinical internships.",
+                form_title: "Send a Message",
+                form_name: "Your Name",
+                form_contact: "Your Email / Phone",
+                form_subject: "Subject",
+                form_msg: "Message",
+                form_btn: "Transmit Message",
+                ph_name: "e.g. Dr. Abebe Tadesse",
+                ph_email: "e.g. contact@hospital.gov.et",
+                ph_subject: "e.g. Clinical Placement / Professional Inquiry",
+                ph_msg: "Write your message or recruitment inquiry here...",
+                footer_sub: "Anesthesia Practitioner • Debre Berhan University",
+                modal_badge: "Official Academic Summary",
+                modal_sub: "4th-Year Anesthesia Student | Debre Berhan University (Asrat Woldeyes Health Campus)",
+                modal_e1: "Education",
+                modal_e2: "Bachelor of Science in Anesthesia (Senior Candidate)",
+                modal_e3: "Debre Berhan University, Asrat Woldeyes Health Campus",
+                modal_r1: "Clinical Rotations",
+                modal_r2: "Tikur Anbessa Specialized Hospital (Addis Ababa): High-volume referral rotations in pediatric, obstetric, emergency, and neurosurgical anesthesia.",
+                modal_r3: "Hakim Gizaw Hospital (Debre Berhan): Emergency resuscitation, spinal anesthesia for obstetric/orthopedic cases, PACU management.",
+                modal_r4: "St. Petros Comprehensive Specialized Hospital (Addis Ababa): Clinical surgical subspecialties including General, Thoracic, Esophageal, Gastrointestinal, Hepatobiliary, Breast, Oncologic, Orthopedic, ENT, Urologic, Pediatric, Gynecologic, and Obstetric Surgery.",
+                modal_r5: "Menelik II Comprehensive Specialized Hospital (Addis Ababa): Clinical surgical subspecialties including General, Thoracic, Esophageal, Gastrointestinal, Hepatobiliary, Breast, Oncologic, Orthopedic, ENT, Urologic, Pediatric, Gynecologic, and Obstetric Surgery.",
+                modal_p1: "Core Proficiencies",
+                modal_p2: "Pre-anesthetic evaluation, Endotracheal Intubation, Spinal Anesthesia, Pharmacological Dosing, Capnography, Intra-operative Crisis Management, BLS/ACLS.",
+                modal_c1: "Contact Information",
+                modal_print: "Print Document",
+                modal_close: "Close Window",
+                form_success: "Thank you! Your message has been sent successfully to Zerihun Getachew."
+            },
+            am: {
+                name: "ዘሪሁን ጌታቸው",
+                title_sub: "የአኔስቴዢያ (ማደንዘዣ) ስፔሻሊስት",
+                nav_about: "ስለ እኔ",
+                nav_rotations: "ክሊኒካዊ ልምምዶች",
+                nav_competencies: "ሙያዊ ብቃቶች",
+                nav_cases: "ዋና ዋና አጋጣሚዎች",
+                nav_contact: "ግንኙነት",
+                mobile_lang_title: "ቋንቋ / Language",
+                hero_badge: "4ኛ ዓመት የአኔስቴዢያ ተማሪ • አስራት ወልደየስ ጤና ሳይንስ ካምፓስ",
+                hero_title_1: "ደህንነቱ የተጠበቀ",
+                hero_title_2: "የአኔስቴዢያ እና የአየር መንገድ ህክምና",
+                hero_description: "እኔ ዘሪሁን ጌታቸው በደብረ ብርሃን ዩኒቨርሲቲ የ4ኛ ዓመት የአኔስቴዢያ ተማሪ ነኝ። በጥቁር አንበሳ፣ ቅዱስ ጴጥሮስ እና ምኒልክ ሁለተኛ ስፔሻላይዝድ ሆስፒታሎች እንዲሁም በሐኪም ጊዛው ሆስፒታል በተደረጉ ከፍተኛ ክሊኒካዊ ልምምዶች በቀዶ ጥገና ወቅት ማደንዘዣ መስጠት፣ አስቸኳይ ህይወት አድን ህክምና እና የአካባቢ ህመም ማስታገሻ ስራዎችን በብቃት አከናውናለሁ።",
+                university_name: "ደብረ ብርሃን ዩኒቨርሲቲ",
+                btn_contact: "መልእክት ይላኩ",
+                btn_cv: "የትምህርት ማስረጃ ይመልከቱ",
+                degree_sub: "የቢ.ኤስ.ሲ አኔስቴዢያ እጩ ተመረቂ",
+                stat_cases: "የተከናወኑ ቀዶ ጥገና ማደንዘዣዎች",
+                stat_hospitals: "ትልልቅ ሪፈራል ሆስፒታሎች",
+                about_subtitle: "ሙያዊ ዳራ",
+                about_title: "ለቀዶ ጥገና ደህንነት እና ለታካሚ ምቾት የተሰጠ",
+                card1_title: "የትምህርት ጥራት",
+                card1_desc: "በደብረ ብርሃን ዩኒቨርሲቲ (አስራት ወልደየስ ጤና ሳይንስ ካምፓስ) በከፍተኛ ሁኔታ እየተማርኩ ይገኛል። የህክምና ሳይንስ፣ የፋርማኮሎጂ፣ የፓቶፊዚዮሎጂ እና የቀዶ ጥገና ማደንዘዣ አስተዳደርን በጥልቀት አጠናቅቄአለሁ።",
+                card1_bullet1: "የአኔስቴዢያ እና ድንገተኛ ህክምና ክፍል",
+                card1_bullet2: "የላቀ የአየር መንገድ እና ህይወት አድን ትምህርቶች",
+                card2_title: "ክሊኒካዊ ፍልስፍና",
+                card2_desc: "በቀዶ ጥገና ክፍሎች ውስጥ የታካሚዎችን ደህንነት 100% የመጠበቅ አላማ አለኝ። ከቀዶ ጥገና በፊት ትክክለኛ ግምገማ ማድረግ፣ ተስማሚ ማደንዘዣ ማዘጋጀት እና ፈጣን ምላሽ መስጠት ላይ ትኩረት አደርጋለሁ።",
+                card2_bullet1: "ታካሚን ማዕከል ያደረገ የማደንዘዣ እቅድ",
+                card2_bullet2: "የቀዶ ጥገና ደህንነት ደንቦችን በጥብቅ መከተል",
+                card3_title: "ለወደፊት ዝግጁነት",
+                card3_desc: "በትልልቅ የህክምና፣ የቀዶ ጥገና እና የድንገተኛ ህክምና ክፍሎች ውስጥ ወዲያውኑ ተመድቦ ለመስራት ሙሉ ዝግጁነት አለኝ። የቡድን ስራ እና ዘመናዊ ቴክኖሎጂዎችን የመጠቀም ብቃት አለኝ።",
+                card3_bullet1: "ለድንገተኛ እና ለተመረጡ ቀዶ ጥገናዎች ዝግጁ",
+                card3_bullet2: "ቀጣይነት ባለው የህክምና ትምህርት ላይ ያተኮረ",
+                rotations_subtitle: "የሆስፒታል ልምድ",
+                rotations_title: "ክሊኒካዊ ልምምዶች እና ተሞክሮዎች",
+                rotations_desc: "በአገሪቱ ከፍተኛ ቦታ ባላቸው ትልልቅ ሪፈራል ሆስፒታሎች ውስጥ የተደረጉ ተግባራዊ ልምምዶች።",
+                tikur_title: "ጥቁር አንበሳ ስፔሻላይዝድ ሆስፒታል",
+                tikur_sub: "ብሄራዊ ከፍተኛ ሪፈራል ማዕከል • አዲስ አበባ፣ ኢትዮጵያ",
+                tikur_tag: "ዋና ክሊኒካዊ ልምምድ",
+                tikur_short: "ጥቁር አንበሳ ሆስፒታል",
+                core_resp: "ዋና ዋና ክሊኒካዊ ሀላፊነቶች",
+                tikur_task1: "በከፍተኛ ስፔሻሊስቶች ቁጥጥር ስር ለህፃናት፣ የነርቭ እና የልብ ቀዶ ጥገናዎች ማደንዘዣ መስጠት እና መርዳት።",
+                tikur_task2: "አስቸጋሪ የአየር መንገድ ሁኔታዎችን በቪዲዮ ላሪንጎስኮፒ እና በኤል.ኤም.ኤ (LMA) ማስተካከል እና መቆጣጠር።",
+                tikur_task3: "ከቀዶ ጥገና በፊት የታካሚዎችን ስጋት መገምገም (ASA scoring) እና ከፍተኛ ስጋት ያለባቸውን ማዘጋጀት።",
+                proc_mastery: "የተከናወኑ ሙያዊ ስራዎች",
+                hakim_title: "ሐኪም ጊዛው ሆስፒታል",
+                hakim_sub: "አጠቃላይ ቀዶ ጥገና እና ድንገተኛ ማዕከል • ደብረ ብርሃን፣ ኢትዮጵያ",
+                hakim_tag: "ተግባራዊ ክሊኒካዊ ልምምድ",
+                hakim_short: "ሐኪም ጊዛው ሆስፒታል",
+                hakim_task1: "የድንገተኛ አደጋ፣ የሆድ እቃዎች እና የድንገተኛ የወሊድ ቀዶ ጥገናዎችን (C-section) ማደንዘዣ መስጠት።",
+                hakim_task2: "የጀርባ አጥንት ማደንዘዣ (Spinal Anesthesia) በተናጠል ለታችኛው የሆድ ክፍል እና አጥንት ህክምና መስጠት።",
+                hakim_task3: "የታካሚውን የደም ግፊት፣ የፈሳሽ መጠን፣ የደም ማነስ እና የህይወት ምልክቶችን በቅርብ መከታተል።",
+                stpetros_title: "ቅዱስ ጴጥሮስ ስፔሻላይዝድ ሆስፒታል",
+                stpetros_sub: "አጠቃላይ ስፔሻላይዝድ ሪፈራል ማዕከል • አዲስ አበባ፣ ኢትዮጵያ",
+                stpetros_tag: "አጠቃላይ የቀዶ ጥገና ልምምድ",
+                menelik_title: "ምኒልክ ሁለተኛ ስፔሻላይዝድ ሆስፒታል",
+                menelik_sub: "አጠቃላይ ስፔሻላይዝድ ሪፈራል ማዕከል • አዲስ አበባ፣ ኢትዮጵያ",
+                menelik_tag: "አጠቃላይ የቀዶ ጥገና ልምምድ",
+                surg_subspecs: "የተሸፈኑ የቀዶ ጥገና ዘርፎች",
+                skills_subtitle: "ቴክኒካዊ ብቃት",
+                skills_title: "ዋና ዋና ክሊኒካዊ ብቃቶች",
+                skills_desc: "በክሊኒካዊ ልምምድ እና በትምህርት የተካበቱ ሙያዊ ችሎታዎች ስብስብ።",
+                tab_airway: "የአየር መንገድ ህክምና",
+                tab_pharm: "ፋርማኮሎጂ እና ማደንዘዣ",
+                tab_monitor: "የታካሚ ክትትል",
+                tab_emerg: "ህይወት አድን እና ማገገሚያ",
+                airway_head: "የላቀ የአየር መንገድ ህክምና",
+                airway_desc: "አስቸጋሪ የአየር መንገድ ሁኔታዎችን በድንገተኛ እና በተመረጡ ቀዶ ጥገናዎች ወቅት በብቃት የማስተካከል ችሎታ።",
+                airway_s1: "የቱቦ ማስገባት ህክምና (Direct & Video Laryngoscopy)",
+                airway_s2: "የላቀ የአየር መንገድ መሳሪያዎች አጠቃቀም (LMA/i-gel)",
+                airway_s3: "የአየር መንገድ አስቸኳይ መፍትሄዎች እና ህጎች",
+                highlight_comp: "ዋና ዋና ብቃቶች",
+                airway_h1: "የአየር መንገድ ስጋት ደረጃዎችን መገምገም (Mallampati)",
+                airway_h2: "ፈጣን የቱቦ ማስገባት እና ማደንዘዣ ሂደት (RSII)",
+                airway_h3: "ታካሚ ሳይደነዝዝ ቱቦ ለማስገባት የማዘጋጀት ሂደት",
+                airway_h4: "ድንገተኛ የቱቦ መውለቅ ችግሮችን መቆጣጠር",
+                pharm_head: "የማደንዘዣ መድሃኒቶች እና አጠቃቀም",
+                pharm_desc: "የማደንዘዣ መድሃኒቶች መጠን፣ አሰራር እና እርስ በእርስ ያላቸውን ግንኙነት በጥልቀት የመረዳት ብቃት።",
+                pharm_s1: "የደም ስር ማደንዘዣዎች (Propofol, Ketamine, Thiopental)",
+                pharm_s2: "የጡንቻ ማላያ እና ማቂያ መድሃኒቶች",
+                pharm_s3: "በአፍንጫ የሚሰጡ ጋዞች (Isoflurane, Sevoflurane)",
+                pharm_h1: "የተመጣጠነ የተቀናጀ የማደንዘዣ ዘዴዎች",
+                pharm_h2: "የህመም ማስታገሻ መድሃኒቶች አጠቃቀም",
+                pharm_h3: "የደም ግፊት ማስተካከያ መድሃኒቶች አስተዳደር",
+                pharm_h4: "የአካባቢ ማደንዘዣ విషማዊነትን የመከላከል ብቃት",
+                monitor_head: "በቀዶ ጥገና ወቅት የታካሚ ክትትል",
+                monitor_desc: "በቀዶ ጥገና ወቅት የታካሚዎችን ደህንነት እና የህይወት ምልክቶች በዘመናዊ መሳሪያዎች መከታተል።",
+                monitor_s1: "የካርቦን ዳይኦክሳይድ መጠን መከታተያ (Capnography)",
+                monitor_s2: "የልብ ምት መከታተያ እና ችግሮችን መለየት (ECG)",
+                monitor_s3: "የደም ዝውውር እና የደም ስር መስመሮች ክትትል",
+                monitor_h1: "የማደንዘዣ ማሽን ቅድመ-ምርመራ ማድረግ",
+                monitor_h2: "የካፕኖግራፊ ሞገድ ችግሮችን መፍትሄ መስጠት",
+                monitor_h3: "የፈሳሽ እና የደም መጠን ሚዛንን መጠበቅ",
+                monitor_h4: "የሰውነት ቅዝቃዜን የመከላከል ዘዴዎች",
+                emerg_head: "ድንገተኛ ህይወት አድን እና ማገገሚያ",
+                emerg_desc: "ከቀዶ ጥገና በኋላ ድንገተኛ ችግሮችን የመቆጣጠር እና ማገገሚያ ክፍል (PACU) ስራዎች።",
+                emerg_s1: "የመጀመሪያ ደረጃ ህይወት አድን ስራዎች (BLS / ACLS)",
+                emerg_s2: "ከማደንዘዣ በኋላ የታካሚ ዝግጁነት መገምገሚያ (Aldrete)",
+                emerg_s3: "የአየር መንገድ መዘጋት ችግሮችን መቆጣጠር",
+                emerg_h1: "ከቀዶ ጥገና በኋላ የህመም ማስታገሻ ስራዎች",
+                emerg_h2: "የማስመለስ እና የማቅለሽለሽ ስሜትን መከላከል",
+                emerg_h3: "ከፍተኛ ደም መፍሰስ ሲያጋጥም ፈጣን እርምጃ መውሰድ",
+                emerg_h4: "ከማደንዘዣ የመነሳት ዘግይቶትን መገምገም",
+                cases_subtitle: "ተግባራዊ ተሞክሮ",
+                cases_title: "ዋና ዋና ክሊኒካዊ አጋጣሚዎች",
+                cases_desc: "በአስተማሪዎች ቁጥጥር ስር በብቃት የተከናወኑ ዋና ዋና ህክምናዎች።",
+                case1_badge: "የወሊድ ህክምና",
+                case1_type: "ድንገተኛ እና የተመረጠ",
+                case1_head: "የድንገተኛ የወሊድ ቀዶ ጥገና ማደንዘዣ",
+                case1_text: "ለአስቸኳይ የወሊድ ቀዶ ጥገናዎች የጀርባ አጥንት ማደንዘዣ (Spinal Anesthesia) መስጠት። የደም ግፊትን በማስተካከል የእናትየዋን ደህንነት መጠበቅ።",
+                spinal_tag: "የጀርባ አጥንት ማደንዘዣ",
+                case2_badge: "የህፃናት ህክምና",
+                case2_type: "በጋዝ ማደንዘዝ",
+                case2_head: "የህፃናት ቀዶ ጥገና አየር መንገድ ህክምና",
+                case2_text: "ለህፃናት በሴቮፍሉሬን ጋዝ ማደንዘዣ መስጠት፣ ትክክለኛ የቱቦ መጠን መምረጥ እና ፈሳሽ መከታተል።",
+                ped_tag: "በጋዝ ማደንዘዝ",
+                case3_badge: "የአጥንት ህክምና",
+                case3_type: "አደጋ እና ተፈጥሮአዊ",
+                case3_head: "ለእግር አደጋዎች የአካባቢ ማደንዘዣ",
+                case3_text: "ለእግር አጥንት ስብራት ቀዶ ጥገናዎች የነርቭ ማደንዘዣዎችን መስጠት እና ከቀዶ ጥገና በኋላ ህመምን መቀነስ።",
+                reg_tag: "የአካባቢ ማደንዘዣ",
+                qual_head: "የትምህርት ደረጃ እና ስልጠናዎች",
+                qual_sub: "ደብረ ብርሃን ዩኒቨርሲቲ • አስራት ወልደየስ ጤና ሳይንስ ካምፓስ",
+                qual_b1: "የቢ.ኤስ.ሲ አኔስቴዢያ እጩ ተመረቂ",
+                qual_b2: "በBLS/ACLS የሰለጠነ",
+                contact_subtitle: "ግንኙነት ያድርጉ",
+                contact_title: "ዘሪሁን ጌታቸውን ያግኙ",
+                contact_desc: "ለሆስፒታል ቅጥር፣ ለክሊኒካዊ ልምምዶች እና ለሙያዊ ምክክሮች ዝግጁ ነኝ።",
+                direct_contact: "ቀጥታ የግንኙነት መረጃ",
+                lbl_phone: "ስልክ ቁጥር",
+                sub_phone: "ለሙያዊ ጥሪዎች ዝግጁ",
+                lbl_email: "ኢሜይል አድራሻ",
+                sub_email: "ቀጥታ የኢሜይል መልእክት",
+                lbl_location: "ዋና ቦታ",
+                val_location: "ደብረ ብርሃን ዩኒቨርሲቲ",
+                val_campus: "አስራት ወልደየስ ጤና ሳይንስ ካምፓስ፣ ኢትዮጵያ",
+                availability_notice: "በአሁኑ ወቅት የ4ኛ ዓመት ክሊኒካዊ ልምምዶችን በማጠናቀቅ ላይ ይገኛል። ከምረቃ በኋላ ለስራ፣ ለምርምር እና ለልምምዶች ዝግጁ።",
+                form_title: "መልእክት ይላኩ",
+                form_name: "የእርስዎ ስም",
+                form_contact: "ኢሜይል / ስልክ",
+                form_subject: "ርዕስ",
+                form_msg: "መልእክት",
+                form_btn: "መልእክቱን ላክ",
+                ph_name: "ምሳሌ፡ ဒ/ር አበበ ታደሰ",
+                ph_email: "ምሳሌ፡ contact@hospital.gov.et",
+                ph_subject: "ምሳሌ፡ የክሊኒክ ስራ / ሙያዊ ጥያቄ",
+                ph_msg: "የመልእክትዎን ዝርዝር እዚህ ይጻፉ...",
+                footer_sub: "የአኔስቴዢያ ባለሙያ • ደብረ ብርሃን ዩኒቨርሲቲ",
+                modal_badge: "ኦፊሴላዊ የትምህርት ማጠቃለያ",
+                modal_sub: "4ኛ ዓመት የአኔስቴዢያ ተማሪ | ደብረ ብርሃን ዩኒቨርሲቲ (አስራት ወልደየስ ጤና ሳይንስ ካምፓስ)",
+                modal_e1: "ትምህርት",
+                modal_e2: "ባችለር ኦፍ ሳይንስ በካንዲዴት አኔስቴዢያ",
+                modal_e3: "ደብረ ብርሃን ዩኒቨርሲቲ፣ አስራት ወልደየስ ጤና ሳይንስ ካምፓስ",
+                modal_r1: "ክሊኒካዊ ልምምዶች",
+                modal_r2: "ጥቁር አንበሳ ስፔሻላይዝድ ሆስፒታል (አዲስ አበባ)፡ በህፃናት፣ ወሊድ፣ ድንገተኛ እና ነርቭ ማደንዘዣዎች ላይ ከፍተኛ ልምምድ።",
+                modal_r3: "ሐኪም ጊዛው ሆስፒታል (ደብረ ብርሃን)፡ ድንገተኛ ህይወት አድን፣ የጀርባ አጥንት ማደንዘዣ እና የማገገሚያ ክፍል ክትትል።",
+                modal_r4: "ቅዱስ ጴጥሮስ ስፔሻላይዝድ ሆስፒታል (አዲስ አበባ)፡ በአጠቃላይ፣ ደረት፣ እሩምታ፣ ጨጓራና አንጀት፣ ጉበትና ሐሞት፣ ጡት፣ ኦንኮሎጂ፣ አጥንት፣ ጆሮ  his አፍንጫ தொንተራ፣ ሲንሳን፣ ህፃናት፣ ማህፀን እና ወሊድ ቀዶ ጥገና ማደንዘዣ ልምምድ።",
+                modal_r5: "ምኒልክ ሁለተኛ ስፔሻላይዝድ ሆስፒታል (አዲስ አበባ)፡ በአጠቃላይ፣ ደረት፣ እሩምታ፣ ጨጓራና አንጀት፣ ጉበትና ሐሞት፣ ጡት፣ ኦንኮሎጂ፣ አጥንት፣ ጆሮ 喉 አፍንጫ፣ ሲንሳን፣ ህፃናት፣ ማህፀን እና ወሊድ ቀዶ ጥገና ማደንዘዣ ልምምድ።",
+                modal_p1: "ዋና ብቃቶች",
+                modal_p2: "ቅድመ-ማደንዘዣ ምርመራ፣ ቱቦ ማስገባት፣ የጀርባ አጥንት ማደንዘዣ፣ የመድሃኒት መጠን ማሰላት፣ የካፕኖግራፊ ክትትል፣ ድንገተኛ አደጋ መቆጣጠር፣ BLS/ACLS።",
+                modal_c1: "የግንኙነት መረጃ",
+                modal_print: "ሰነዱን አትም",
+                modal_close: "ስክሪኑን ዝጋ",
+                form_success: "እናመሰግናለን! መልእክትዎ ለዘሪሁን ጌታቸው በስኬት ተላኳል።"
+            }
+        };
+
+        // Current Language State
+        let currentLang = 'en';
+
+        // Function to set language and update DOM
+        function setLanguage(lang) {
+            currentLang = lang;
+            const dict = translations[lang];
+
+            // Update all elements with data-i18n
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (dict[key]) {
+                    el.textContent = dict[key];
+                }
+            });
+
+            // Update Placeholders
+            if (lang === 'am') {
+                document.getElementById('input-name').placeholder = dict.ph_name;
+                document.getElementById('input-email').placeholder = dict.ph_email;
+                document.getElementById('input-subject').placeholder = dict.ph_subject;
+                document.getElementById('input-message').placeholder = dict.ph_msg;
+            } else {
+                document.getElementById('input-name').placeholder = "e.g. Dr. Abebe Tadesse";
+                document.getElementById('input-email').placeholder = "e.g. contact@hospital.gov.et";
+                document.getElementById('input-subject').placeholder = "e.g. Clinical Placement / Professional Inquiry";
+                document.getElementById('input-message').placeholder = "Write your message or recruitment inquiry here...";
+            }
+
+            // Update Active Button Styles
+            const enBtn = document.getElementById('lang-en-btn');
+            const amBtn = document.getElementById('lang-am-btn');
+
+            if (lang === 'en') {
+                enBtn.classList.add('lang-btn-active');
+                amBtn.classList.remove('lang-btn-active');
+            } else {
+                amBtn.classList.add('lang-btn-active');
+                enBtn.classList.remove('lang-btn-active');
+            }
+        }
+
+        // Theme Toggle Functionality
+        function toggleTheme() {
+            const html = document.documentElement;
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Tab Switcher Functionality
+        function switchTab(tabKey) {
+            // Hide all tab panes
+            document.querySelectorAll('.tab-pane').forEach(pane => {
+                pane.classList.add('hidden');
+            });
+
+            // Show selected pane
+            const targetPane = document.getElementById(`content-${tabKey}`);
+            if (targetPane) {
+                targetPane.classList.remove('hidden');
+            }
+
+            // Reset tab button styling
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.className = "tab-btn px-5 py-2.5 rounded-xl font-semibold text-xs sm:text-sm transition-all bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white border border-slate-300 dark:border-slate-800 shadow-sm";
+            });
+
+            // Highlight active tab button
+            const activeBtn = document.getElementById(`tab-${tabKey}`);
+            if (activeBtn) {
+                activeBtn.className = "tab-btn px-5 py-2.5 rounded-xl font-semibold text-xs sm:text-sm transition-all bg-medical-600 text-white shadow-md shadow-medical-600/30";
+            }
+        }
+
+        // Form Submit Handler
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const alertBox = document.getElementById('form-alert');
+            const dict = translations[currentLang];
+
+            alertBox.className = "mt-4 p-4 rounded-xl text-xs font-medium bg-emerald-500/10 border border-emerald-500/30 text-emerald-800 dark:text-emerald-300 block";
+            alertBox.textContent = dict.form_success;
+
+            document.getElementById('contact-form').reset();
+
+            setTimeout(() => {
+                alertBox.classList.add('hidden');
+            }, 6000);
+        }
+
+        // Modal Open/Close Controls
+        function openModal() {
+            document.getElementById('cv-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('cv-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Initialize Default Settings on Load
+        window.addEventListener('DOMContentLoaded', () => {
+            // Initialize Default Language (English)
+            setLanguage('en');
+
+            // Initialize System/Stored Theme
+            if (localStorage.theme === 'light' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+                document.documentElement.classList.remove('dark');
+            } else {
+                document.documentElement.classList.add('dark');
+            }
+        });
+    </script>
+</body>
+</html>
