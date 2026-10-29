@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zerihungetachew.vercel.app/sitemap.xml
