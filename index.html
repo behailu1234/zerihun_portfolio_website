@@ -333,9 +333,9 @@
     <!-- Accessibility Skip Link -->
     <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-medical-600 focus:text-white focus:font-semibold focus:rounded-xl focus:shadow-2xl focus:outline-none">Skip to main content</a>
 
-    <!-- Floating Modern Island Navigation Bar (Not too wide, No full bleed on edges) -->
-    <header class="fixed top-3 sm:top-5 inset-x-0 z-40 flex justify-center px-3 sm:px-6 pointer-events-none" id="navbar">
-        <div class="w-full max-w-5xl lg:max-w-6xl h-16 sm:h-20 px-3.5 sm:px-6 rounded-2xl sm:rounded-full bg-white/90 dark:bg-[#060c1e]/90 backdrop-blur-xl border border-slate-200/90 dark:border-slate-800/80 shadow-lg shadow-slate-900/5 dark:shadow-black/40 flex items-center justify-between pointer-events-auto transition-all duration-300" id="navbar-container">
+    <!-- Modern Sticky Navigation Bar (Flush to top, left, and right with no side or top gaps) -->
+    <header class="fixed top-0 inset-x-0 z-40 w-full bg-white/90 dark:bg-[#060c1e]/90 backdrop-blur-xl border-b border-slate-200/80 dark:border-slate-800/80 shadow-sm transition-all duration-300" id="navbar">
+        <div class="w-full max-w-6xl mx-auto h-16 sm:h-20 px-4 sm:px-6 lg:px-8 flex items-center justify-between" id="navbar-container">
             <!-- Brand Identity -->
             <a href="#" class="flex items-center gap-2.5 sm:gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-medical-500 rounded-xl p-1" aria-label="Zerihun Getachew Home">
                 <div class="relative flex-shrink-0">
@@ -2425,14 +2425,14 @@
             }
 
             // Navbar shadow & glass intensity change on scroll
-            const navbarContainer = document.getElementById('navbar-container');
-            if (navbarContainer) {
+            const navbar = document.getElementById('navbar');
+            if (navbar) {
                 if (window.scrollY > 20) {
-                    navbarContainer.classList.add('shadow-xl', 'bg-white/95', 'dark:bg-[#060c1e]/95');
-                    navbarContainer.classList.remove('bg-white/90', 'dark:bg-[#060c1e]/90');
+                    navbar.classList.add('shadow-md', 'bg-white/95', 'dark:bg-[#060c1e]/95');
+                    navbar.classList.remove('bg-white/90', 'dark:bg-[#060c1e]/90');
                 } else {
-                    navbarContainer.classList.remove('shadow-xl', 'bg-white/95', 'dark:bg-[#060c1e]/95');
-                    navbarContainer.classList.add('bg-white/90', 'dark:bg-[#060c1e]/90');
+                    navbar.classList.remove('shadow-md', 'bg-white/95', 'dark:bg-[#060c1e]/95');
+                    navbar.classList.add('bg-white/90', 'dark:bg-[#060c1e]/90');
                 }
             }
         });
